@@ -1,0 +1,12 @@
+1. Your code will be run on up to 8 micro:bits.
+2. The micro:bits will be placed between 1-2m off the ground, spaced equally along the circumference of a circle. The circle is between 2-3m in diameter.
+3. Someone will stand inside the circle (a w​ alker​).
+4. The walker will perform the following actions:
+    a) Walk inside the circle continuously for τ w seconds, 5 ≤ τ w ≤ 10
+    b) Stop anywhere inside the circle, and be still for τ s seconds, 5 ≤ τ s ≤ 10 c. 
+    Repeat the above N times, 1≤ N ≤10
+5. The walker will not touch any of the micro:bits
+
+Requirements:
+1. Exactly 1 micro:bit stays lit for any amount of time while the walker is walking
+2. All micro:bits stay unlit for > 0.5τ s seconds while the walker is still

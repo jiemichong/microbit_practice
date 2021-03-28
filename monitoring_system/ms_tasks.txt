@@ -1,0 +1,25 @@
+Code to implement a simple monitoring system at a deserted place where a homeless person sleeps.
+
+Components
+1. Light sensor: Placed at a suitable location to detect ambient light. Sends light readings every
+5s to the gateway, which then decides whether it is day or night.
+
+2. Help button: Carried by the person at all times. When the person needs help, they should
+press Button A, which sends a help request to the gateway. To cancel a help request, they
+should press Button B. 
+
+3. Motion sensor: Worn by the person. When the person moves, the micro:bit shakes, and it
+sends a “motion detected” message to the gateway. In a real system, if the person has been
+inactive for a long time, the gateway triggers an alert to a social worker. 
+
+4. Gateway:​ Collects data from all the other micro:bits and processes it..
+    a. When a help request is received, a ​help icon is displayed on the gateway’s LEDs. When the help request is cancelled, the help icon disappears. (2m)
+    b. The ​inactive time is the amount of time elapsed since a “motion detected” message was received by the gateway. If it is day, and the inactive time is >5s, the gateway displays an i​ nactive icon.​ If the inactive time is ​≤​5s, the icon disappears. At night, the icon disappears. (2m)
+    c. When there is both a help request and the inactive time is >5s, both the help icon and inactive icon are continuously displayed, one after the other. (2m)
+
+Requirements
+1. Your code must use the event-driven approach. There must not be any polling-based code,
+except for code which has no event-driven equivalent.
+2. At least 2 micro:bits should be used for this system.
+    a. One micro:bit implements the gateway component.
+    b. The other micro:bits implement one or more of the other components.
